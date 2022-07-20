@@ -26,8 +26,8 @@
 
                     <div class="tempInformation  ">
                         <div class="top_layer">
-                            <p id="day">Wednesday</p>
-                            <p id="today_date">13 July</p>
+                            <p id="day">getCurrentDay</p>
+                            <p id="today_date">getCurrentTime</p>
                         </div>
                         <div class="main_layer ">
                             <p id="city_name">Get output here </p>
@@ -72,6 +72,17 @@
 
     };
     getCurrentDay();
+    
+    const getCurrentTime=()=>{
+         let months = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"];
+         let now=new Date();
+          let month=months[now.getMonth()];
+          let date=now.getDate();
+          let year =now.getFullYear();
+          let today=document.getElementById('today_date');
+          today.innerText=date+ " "+month+" "+year;
+    };
+    getCurrentTime();
 
 </script>
 </body>
